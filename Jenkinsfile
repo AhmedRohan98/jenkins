@@ -5,7 +5,7 @@ pipeline {
         }
     }
     environment {
-        GITHUB_TOKEN = credentials('github-token') // Use the ID of your GitHub token
+        GITHUB_TOKEN = credentials('githubtoken') // Use the ID of your GitHub token
     }
     stages {
         stage('Checkout') {
