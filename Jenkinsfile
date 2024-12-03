@@ -1,15 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('Test Docker') {
+        stage('Build') {
             steps {
-                script {
+                withEnv(['PATH+DOCKER=/usr/local/bin:/usr/bin']) {
                     sh 'docker --version'
                 }
             }
         }
     }
 }
+
 
 // pipeline {
 //     agent {
